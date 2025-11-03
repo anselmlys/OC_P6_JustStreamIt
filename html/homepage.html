@@ -2,95 +2,294 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
         <title>JustStreamIt - Page d'accueil</title>
     </head>
     <body>
         <header>
-            <img src="../image/logo.png" alt="Logo de 'JustStreamIt'" title="JustStreamIt"/>
+            <img class="logo" src="../image/logo.png" alt="Logo de 'JustStreamIt'" 
+            title="JustStreamIt"/>
             <h1>Vidéos à la demande</h1>
         </header>
         <main>
             <section>
                 <h2>Meilleur film</h2>
-                <img src="https://picsum.photos/227/334" alt="Affiche du meilleur film." 
-                title="Affiche du meilleur film"/>
-                <h3>Lorem ipsum dolor</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. 
-                    Quisque faucibus ex sapien vitae pellentesque sem placerat. 
-                    In id cursus mi pretium tellus duis convallis. 
-                    Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus 
-                    fringilla lacus nec metus bibendum egestas. Iaculis massa 
-                    nisl malesuada lacinia integer nunc posuere. Ut hendrerit 
-                    semper vel class aptent taciti sociosqu. Ad litora torquent 
-                    per conubia nostra inceptos himenaeos.</p>
-                <button>Détails</button>
+                <div class="best-movie-box">
+                    <img src="https://picsum.photos/230/335" alt="Affiche du meilleur film." 
+                    title="Affiche du meilleur film"/>
+                    <div class="best-movie-details">
+                        <h3>Lorem ipsum dolor</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+                            Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+                            In id cursus mi pretium tellus duis convallis. 
+                            Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus 
+                            fringilla lacus nec metus bibendum egestas. Iaculis massa 
+                            nisl malesuada lacinia integer nunc posuere. Ut hendrerit 
+                            semper vel class aptent taciti sociosqu. Ad litora torquent 
+                            per conubia nostra inceptos himenaeos.</p>
+                        <button>Détails</button>
+                    </div>
+                </div>
             </section>
             <section>
                 <h2>Films les mieux notés</h2>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
-                </div>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
-                </div>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
-                </div>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
-                </div>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
-                </div>
-                <div>
-                    <button>Détails</button>
-                    <p>Lorem ipsum dolor</p>
-                    <img src="https://picsum.photos/250"/>
+                <div class="movie-grid">
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section>
                 <h2>Catégorie 1</h2>
-                <img src="https://picsum.photos/844/558"/>
+                <div class="movie-grid">
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section>
                 <h2>Catégorie 2</h2>
-                <img src="https://picsum.photos/844/558"/>
+                <div class="movie-grid">
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section>
-                <h2>Autres:</h2>
-                <select name="category">
-                    <option value="Lorem ipsum">Film d'action</option>
-                    <option value="Lorem ipsum">Comédies</option>
-                    <option value="Lorem ipsum">Famille</option>
-                    <option value="Lorem ipsum">Films de fantasy</option>
-                    <option value="Lorem ipsum">Films d'horreur</option>
-                    <option value="Lorem ipsum">Science-fiction</option>
-                    <option value="Lorem ipsum">Westerns</option>
-                </select>
-                <img src="https://picsum.photos/844/558"/>
+                <div class="category-selection">
+                    <h2>Autres:</h2>
+                    <select name="category">
+                        <option value="Lorem ipsum">Film d'action</option>
+                        <option value="Lorem ipsum">Comédies</option>
+                        <option value="Lorem ipsum">Famille</option>
+                        <option value="Lorem ipsum">Films de fantasy</option>
+                        <option value="Lorem ipsum">Films d'horreur</option>
+                        <option value="Lorem ipsum">Science-fiction</option>
+                        <option value="Lorem ipsum">Westerns</option>
+                    </select>
+                </div>
+                <div class="movie-grid">
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section>
-                <h2>Autres:</h2>
-                <select name="category">
-                    <option value="Lorem ipsum">Film d'action</option>
-                    <option value="Lorem ipsum">Comédies</option>
-                    <option value="Lorem ipsum">Famille</option>
-                    <option value="Lorem ipsum">Films de fantasy</option>
-                    <option value="Lorem ipsum">Films d'horreur</option>
-                    <option value="Lorem ipsum">Science-fiction</option>
-                    <option value="Lorem ipsum">Westerns</option>
-                </select>
-                <img src="https://picsum.photos/844/558"/>
+                <div class="category-selection">
+                    <h2>Autres:</h2>
+                    <select name="category">
+                        <option value="Lorem ipsum">Film d'action</option>
+                        <option value="Lorem ipsum">Comédies</option>
+                        <option value="Lorem ipsum">Famille</option>
+                        <option value="Lorem ipsum">Films de fantasy</option>
+                        <option value="Lorem ipsum">Films d'horreur</option>
+                        <option value="Lorem ipsum">Science-fiction</option>
+                        <option value="Lorem ipsum">Westerns</option>
+                    </select>
+                </div>
+                <div class="movie-grid">
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                    <div class="movie-grid-cell">
+                        <img src="https://picsum.photos/500"/>
+                        <div class="movie-grid-cell-details">
+                            <h4>Lorem ipsum dolor</h4>
+                            <button>Détails</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     </body>
