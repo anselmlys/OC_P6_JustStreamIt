@@ -1,4 +1,4 @@
-export async function getBestMovie() {
+async function getBestMovie() {
     const bestMovieDataUrl = "http://127.0.0.1:8000/api/v1/titles/?sort_by=-imdb_score"
     let response = await fetch(bestMovieDataUrl)
 
@@ -11,7 +11,7 @@ export async function getBestMovie() {
 }
 
 
-export async function getBestMovieSummary(bestMovie) {
+async function getBestMovieSummary(bestMovie) {
     let response = await fetch(bestMovie.url)
 
     if (response.ok) {
@@ -22,3 +22,6 @@ export async function getBestMovieSummary(bestMovie) {
         alert("HTTP-Error: " + response.status)
     }
 }
+
+
+export { getBestMovie, getBestMovieSummary }

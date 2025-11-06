@@ -1,4 +1,4 @@
-import { getBestMovieSummary } from "../api/best-movie.js"
+import { getBestMovie, getBestMovieSummary } from "../api/best-movie.js"
 
 function displayBestMovieTitle(bestMovie) {
     let bestMovieTitle = document.createElement("h3")
@@ -23,5 +23,11 @@ function displayBestMovieImage(bestMovie) {
     bestMovieBox.insertBefore(bestMovieImage, bestMovieBox.firstChild)
 }
 
+export async function displayBestMovie() {
+    let bestMovie = await getBestMovie()
 
-export { displayBestMovieTitle, displayBestMovieSummary, displayBestMovieImage }
+    displayBestMovieTitle(bestMovie)
+    displayBestMovieSummary(bestMovie)
+    /* displayBestMovieImage(bestMovie) 
+    Do not add this function as long as error 404 still there*/
+}

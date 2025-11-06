@@ -2,7 +2,7 @@ import { getSixBestMovies } from "../api/movie-grid.js"
 
 
 const movieCellTemplate = (() => {
-    const template = document.createElement("template")
+    let template = document.createElement("template")
     template.innerHTML = `
     <div class="movie-grid-cell">
         <img src="https://picsum.photos/500/700"/>
