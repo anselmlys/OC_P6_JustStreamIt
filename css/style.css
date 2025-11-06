@@ -79,7 +79,7 @@ h3 {
     height: 68px;
     margin: 10px;
     padding: 2px, 4px, 2px, 4px;
-    align-self: self-end;
+    align-self: flex-end;
 }
 
 .movie-grid {
@@ -98,6 +98,12 @@ h3 {
 .movie-grid-cell-details {
     grid-column: 1;
     grid-row: 1;
+}
+
+.movie-grid img {
+    object-fit: cover;
+    height: 30em;
+    width: 30em;
 }
 
 .movie-grid-cell-details {
