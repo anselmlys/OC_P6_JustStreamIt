@@ -11,3 +11,16 @@ export async function getBestMovie() {
         alert("HTTP-Error: " + response.status)
     }
 }
+
+
+export async function getBestMovieSummary(bestMovie) {
+    let response = await fetch(bestMovie.url)
+
+    if (response.ok) {
+        let movieData = await response.json()
+        let bestMovieSummary = movieData.description
+        return bestMovieSummary
+    } else {
+        alert("HTTP-Error: " + response.status)
+    }
+}
