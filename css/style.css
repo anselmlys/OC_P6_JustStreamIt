@@ -87,11 +87,12 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
     justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .movie-grid-cell {
     display: grid;
-    width: fit-content;
 }
 
 .movie-grid img,
@@ -101,9 +102,9 @@ h3 {
 }
 
 .movie-grid img {
+    width: 100%;
     object-fit: cover;
-    height: 30em;
-    width: 30em;
+    aspect-ratio: 1 / 1;
 }
 
 .movie-grid-cell-details {
