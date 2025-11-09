@@ -92,6 +92,41 @@ h3 {
     display: none;
 }
 
+.see-more {
+    display: block;
+    text-align: center;
+}
+
+.see-more input {
+    display: none;
+}
+
+.see-more-button {
+    display: inline-block;
+    background-color: #FA0B0B;
+    color: #FFFFFF;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    border: none;
+    border-radius: 25px;
+    padding: 0.2em 3.5em;
+    margin: 1em auto 0em;
+    cursor: pointer;
+}
+
+.see-more-button::after {
+    content: "Voir plus";
+}
+
+.grid-and-see-more:has(input:checked) .movie-grid > *:nth-child(n) {
+    display: grid;
+}
+
+.see-more input:checked + .see-more-button::after {
+    content: "Voir moins";
+}
+
 .movie-grid-cell {
     display: grid;
 }
@@ -229,5 +264,9 @@ option {
 
     .movie-grid > *:nth-child(n) {
         display: grid;
+    }
+
+    .see-more {
+        display: none;
     }
 }
