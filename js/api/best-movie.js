@@ -11,17 +11,16 @@ async function getBestMovie() {
 }
 
 
-async function getBestMovieSummary(bestMovie) {
+async function getMovieData(bestMovie) {
     let response = await fetch(bestMovie.url)
 
     if (response.ok) {
         let movieData = await response.json()
-        let bestMovieSummary = await movieData.description
-        return bestMovieSummary
+        return movieData
     } else {
         alert("HTTP-Error: " + response.status)
     }
 }
 
 
-export { getBestMovie, getBestMovieSummary }
+export { getBestMovie, getMovieData }

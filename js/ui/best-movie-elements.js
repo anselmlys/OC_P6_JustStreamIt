@@ -1,4 +1,4 @@
-import { getBestMovie, getBestMovieSummary } from "../api/best-movie.js"
+import { getBestMovie, getMovieData } from "../api/best-movie.js"
 
 function displayBestMovieTitle(bestMovie) {
     let bestMovieTitle = document.createElement("h3")
@@ -9,9 +9,10 @@ function displayBestMovieTitle(bestMovie) {
 
 async function displayBestMovieSummary(bestMovie) {
     let bestMovieSummary = document.createElement("p")
-    bestMovieSummary.innerText = await getBestMovieSummary(bestMovie)
+    let movieData = await getMovieData(bestMovie)
+    bestMovieSummary.innerText = movieData.description
     let bestMovieDetails = document.querySelector(".best-movie-details")
-    bestMovieDetails.querySelector("button").insertAdjacentElement("beforebegin", bestMovieSummary)
+    bestMovieDetails.querySelector("a").insertAdjacentElement("beforebegin", bestMovieSummary)
 }
 
 function displayBestMovieImage(bestMovie) {
