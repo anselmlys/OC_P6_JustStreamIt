@@ -1,4 +1,6 @@
-import { getBestMovie, getMovieData } from "../api/best-movie.js"
+import { getBestMovie } from "../api/get-best-movie.js"
+import { getSixBestMovies } from "../api/get-best-movies.js"
+import { getMovieData } from "../api/full-movie-data.js"
 
 
 const movieModalTemplate = (() => {
@@ -18,7 +20,6 @@ const movieModalTemplate = (() => {
 })()
 
 function createModalContent(movie) {
-    let modalSection = document.querySelector(".modal")
     let modalContent = movieModalTemplate.content.cloneNode(true)
 
     modalContent.querySelector("h3").innerText = movie.title
@@ -44,12 +45,11 @@ function createModalContent(movie) {
     modalContent.querySelector(".actors-section").innerHTML = `<b>Avec:</b><br>
     ${movie.actors.join(", ")}`
 
-    modalSection.append(modalContent)
+    return modalContent
 }
 
-export async function displayBestMovieModal() {
-    let bestMovie = await getBestMovie()
-    let movieData = await getMovieData(bestMovie)
-
-    createModalContent(movieData)
+export function addMovieModal(movieSection, movieData) {
+    let modalSection = movieSection.querySelector(".modal")
+    let modalContent = createModalContent(movieData)
+    modalSection.append(modalContent)
 }

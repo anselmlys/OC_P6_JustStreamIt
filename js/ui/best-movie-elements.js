@@ -1,4 +1,7 @@
-import { getBestMovie, getMovieData } from "../api/best-movie.js"
+import { getBestMovie } from "../api/get-best-movie.js"
+import { getMovieData } from "../api/full-movie-data.js"
+import { addMovieModal } from "../ui/movie-details-modal.js"
+
 
 function displayBestMovieTitle(bestMovie) {
     let bestMovieTitle = document.createElement("h3")
@@ -24,6 +27,12 @@ function displayBestMovieImage(bestMovie) {
     bestMovieBox.insertBefore(bestMovieImage, bestMovieBox.firstChild)
 }
 
+async function displayBestMovieModal(section, bestMovie) {
+    let movieSection = document.getElementById(section)
+    let movieData = await getMovieData(bestMovie)
+    addMovieModal(movieSection, movieData)
+}
+
 export async function displayBestMovie() {
     let bestMovie = await getBestMovie()
 
@@ -31,4 +40,5 @@ export async function displayBestMovie() {
     displayBestMovieSummary(bestMovie)
     /* displayBestMovieImage(bestMovie) 
     Do not add this function as long as error 404 still there*/
+    displayBestMovieModal("best-movie", bestMovie)
 }

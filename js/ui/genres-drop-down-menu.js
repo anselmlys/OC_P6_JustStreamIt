@@ -1,4 +1,4 @@
-import { getGenres } from "../api/genres.js"
+import { getGenres } from "../api/get-genres.js"
 
 
 function createDropdownOption(section, genre) {
