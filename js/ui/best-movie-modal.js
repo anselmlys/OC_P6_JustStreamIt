@@ -11,7 +11,8 @@ const movieModalTemplate = (() => {
         <p class="summary-section"></p>
         <img/>
         <p class="actors-section"></p>
-        <a href="#" class="modal-close">❌</a>
+        <a href="#" class="mobile-modal-close">❌</a>
+        <a href="#" class="desktop-modal-close">Fermer</a>
     </div>`
     return template
 })()
