@@ -9,7 +9,7 @@ function displayMovieData() {
     displayMovieGrid("thriller", "thriller")
     displayMovieGrid("sci-fi", "sci-fi")
     displayMovieGrid("other-1", "action")
-    displayMovieGrid("other-2", "comedy")
+    displayMovieGrid("other-2", "action")
 
     document.addEventListener('DOMContentLoaded', () => {
         displayDropdownOptions("other-1")

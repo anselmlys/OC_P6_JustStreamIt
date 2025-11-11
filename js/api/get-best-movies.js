@@ -9,11 +9,7 @@ export async function getSixBestMovies(genre) {
 
     if (response.ok) {
         let bestMoviesData = await response.json()
-        let movieList = []
-        for (let i = 0;  i < 7; i++) {
-            movieList.push(bestMoviesData.results[i])
-        }
-        movieList.shift()
+        let movieList = bestMoviesData.results.slice(0, 6)
         return movieList
     } else {
         alert("HTTP-Error: " + response.status)

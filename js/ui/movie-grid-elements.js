@@ -26,7 +26,7 @@ function createMovieCell(movieData, section) {
     let cellTemplate = movieCellTemplate.content.cloneNode(true)
     cellTemplate.querySelector("h4").innerText = movieData.title
     cellTemplate.querySelector("a").setAttribute("href", `#modal-movie-details-${movieData.id}`)
-    cellTemplate.getElementById("modal-movie-details").setAttribute("id", `modal-movie-details-${movieData.id}`)
+    cellTemplate.querySelector("#modal-movie-details").setAttribute("id", `modal-movie-details-${movieData.id}`)
     addMovieModal(cellTemplate, movieData)
     movieGrid.append(cellTemplate)
 }
