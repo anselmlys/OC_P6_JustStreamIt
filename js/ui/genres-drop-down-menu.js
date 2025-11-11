@@ -1,18 +1,33 @@
 import { getGenres } from "../api/get-genres.js"
+import { displayMovieGrid, removeMovieGrid } from "./movie-grid-elements.js"
 
 
-function createDropdownOption(section, genre) {
-    let currentSection = document.getElementById(section)
-    let dropdownSection = currentSection.querySelector("select")
+function createDropdownOption(dropdownSection, genre) {
     let option = document.createElement("option")
     option.setAttribute("value", genre)
     option.innerText = genre
     dropdownSection.append(option)
 }
 
-export async function displayDropdownOptions(section) {
+async function displayDropdownOptions(section) {
+    let currentSection = document.getElementById(section)
+    let dropdownSection = currentSection.querySelector("select")
     let genresList = await getGenres()
     for (let genre of genresList) {
-        createDropdownOption(section, genre.name)
+        createDropdownOption(dropdownSection, genre.name)
     }
+    dropdownSection.addEventListener('change', (e) => {
+        let selectedGenre = e.target.value
+        removeMovieGrid(section)
+        displayMovieGrid(section, selectedGenre)
+    })
 }
+
+function getDropdownSelection(section) {
+    let categorySelect = document.getElementById(`${section}-category`)
+    let selectedGenre = categorySelect.options[categorySelect.selectedIndex].text
+    return selectedGenre
+}
+
+
+export { displayDropdownOptions, getDropdownSelection }

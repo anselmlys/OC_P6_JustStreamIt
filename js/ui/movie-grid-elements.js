@@ -38,3 +38,10 @@ export async function displayMovieGrid(section, genre) {
         createMovieCell(movieData, section)
     }
 }
+
+export function removeMovieGrid(section) {
+    let genreSection = document.getElementById(section)
+    let movieGrid = genreSection.querySelector(".movie-grid")
+    let grids = movieGrid.querySelectorAll(".movie-grid-cell")
+    grids.forEach(grid => grid.remove())
+}
