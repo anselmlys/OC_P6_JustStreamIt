@@ -5,6 +5,7 @@ import { displayDropdownOptions } from "../js/ui/genres-drop-down-menu.js"
 
 function displayMovieData() {
     displayBestMovie()
+    displayMovieGrid("best-movies", null)
     displayMovieGrid("thriller", "thriller")
     displayMovieGrid("sci-fi", "sci-fi")
     displayDropdownOptions("autres-1")
