@@ -7,7 +7,7 @@ const movieCellTemplate = (() => {
     let template = document.createElement("template")
     template.innerHTML = `
     <div class="movie-grid-cell">
-        <img class="grid-image" src="https://picsum.photos/500/700"/>
+        <img class="grid-image" src="https://picsum.photos/550/750"/>
         <div class="movie-grid-cell-details">
             <h4></h4>
             <div class="grid-movie-details">
