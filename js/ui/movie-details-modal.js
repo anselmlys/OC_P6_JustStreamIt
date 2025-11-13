@@ -13,8 +13,8 @@ const movieModalTemplate = (() => {
         <p class="summary-section"></p>
         <img/>
         <p class="actors-section"></p>
-        <a href="#" class="mobile-modal-close">❌</a>
-        <a href="#" class="desktop-modal-close">Fermer</a>
+        <a href="#!" class="mobile-modal-close">❌</a>
+        <a href="#!" class="desktop-modal-close">Fermer</a>
     </div>`
     return template
 })()
@@ -27,11 +27,27 @@ function createModalContent(movie) {
     let income
     if (movie.worldwide_gross_income === null) {
         income = "Unknown"
+    } else if (movie.worldwide_gross_income / 1000000 >= 1) {
+        let modifiedIncome = movie.worldwide_gross_income / 1000000
+        modifiedIncome = Math.round(modifiedIncome * 10) / 10
+        income = `$${modifiedIncome}M`
+    } else if (movie.worldwide_gross_income / 1000 >= 1) {
+        let modifiedIncome = movie.worldwide_gross_income / 1000
+        modifiedIncome = Math.round(modifiedIncome * 10) / 10
+        income = `$${modifiedIncome}k`
     } else {
         income = `$${movie.worldwide_gross_income}`
     }
+
+    let rating 
+    if (movie.rated === "Not rated or unkown rating") {
+        rating = "Not rated or unkown rating"
+    } else {
+        rating = `Rated: ${movie.rated}`
+    }
+
     modalContent.querySelector("h5").innerText = `${movie.year} - ${movie.genres.join(", ")}
-    ${movie.rated} - ${movie.duration} minutes (${movie.countries.join(", ")})
+    ${rating} - ${movie.duration} minutes (${movie.countries.join(", ")})
     IMDb score: ${movie.imdb_score}/10
     Recettes au box-office: ${income}`
 

@@ -8,12 +8,10 @@ function displayMovieData() {
     displayMovieGrid("best-movies", null)
     displayMovieGrid("thriller", "thriller")
     displayMovieGrid("sci-fi", "sci-fi")
-    displayMovieGrid("other-1", "action")
-    displayMovieGrid("other-2", "action")
+    displayMovieGrid("other", "action")
 
     document.addEventListener('DOMContentLoaded', () => {
-        displayDropdownOptions("other-1")
-        displayDropdownOptions('other-2')
+        displayDropdownOptions("other")
     })
 }
 
