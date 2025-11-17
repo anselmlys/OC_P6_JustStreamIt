@@ -27,7 +27,9 @@ function createBestMovieBox(movieData) {
 
     let movieImage = bestMovieBox.querySelector("img")
     movieImage.setAttribute("src", movieData.image_url)
-    movieImage.setAttribute("onerror", "this.src='../image/no-image.png'")
+    movieImage.setAttribute(
+        "onerror", 
+        "this.onerror=null; this.src='../image/no-image.png'; this.alt='Image indisponible'; this.title='Image indisponible'")
     movieImage.setAttribute("alt", "Affiche du film " + movieData.title)
     movieImage.setAttribute("title", movieData.title)
     addMovieModal(bestMovieBox, movieData)

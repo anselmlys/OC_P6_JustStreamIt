@@ -58,7 +58,7 @@ function createModalContent(movie) {
 
     let modalImage = modalContent.querySelector("img")
     modalImage.setAttribute("src", movie.image_url)
-    modalImage.setAttribute("onerror", "this.src='../image/no-image.png'")
+    modalImage.setAttribute("onerror", "this.remove()")
     modalImage.setAttribute("alt", "Affiche du film " + movie.title)
     modalImage.setAttribute("title", movie.title)
 

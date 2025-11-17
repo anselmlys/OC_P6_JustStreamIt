@@ -150,6 +150,11 @@ h3 {
     margin: 0;
 }
 
+.modal-content .summary-section {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .modal-content img {
     height: auto;
     width: 100%;
