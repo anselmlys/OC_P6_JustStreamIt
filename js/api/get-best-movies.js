@@ -5,12 +5,20 @@ export async function getSixBestMovies(genre) {
     } else {
         bestMoviesURL = "http://127.0.0.1:8000/api/v1/titles/?genre="+genre+"&sort_by=-imdb_score&page_size=10"
     }
+
     let response = await fetch(bestMoviesURL)
 
     if (response.ok) {
         let bestMoviesData = await response.json()
-        let movieList = bestMoviesData.results.slice(0, 6)
-        return movieList
+
+        if (genre === null) {
+            let movieList = bestMoviesData.results.slice(1, 7)
+            return movieList
+        } else {
+            let movieList = bestMoviesData.results.slice(0, 6)
+            return movieList
+        }
+        
     } else {
         alert("HTTP-Error: " + response.status)
     }
