@@ -24,9 +24,12 @@ function createBestMovieBox(movieData) {
 
     bestMovieBox.querySelector("h3").innerText = movieData.title
     bestMovieBox.querySelector("p").innerText = movieData.description
-    bestMovieBox.querySelector("img").setAttribute("src", "https://picsum.photos/550/750")
-    bestMovieBox.querySelector("img").setAttribute("alt", "Affiche du film " + movieData.title)
-    bestMovieBox.querySelector("img").setAttribute("title", movieData.title)
+
+    let movieImage = bestMovieBox.querySelector("img")
+    movieImage.setAttribute("src", movieData.image_url)
+    movieImage.setAttribute("onerror", "this.src='../image/no-image.png'")
+    movieImage.setAttribute("alt", "Affiche du film " + movieData.title)
+    movieImage.setAttribute("title", movieData.title)
     addMovieModal(bestMovieBox, movieData)
 
     return bestMovieBox

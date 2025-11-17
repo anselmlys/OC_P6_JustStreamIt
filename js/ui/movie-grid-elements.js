@@ -7,7 +7,7 @@ const movieCellTemplate = (() => {
     let template = document.createElement("template")
     template.innerHTML = `
     <div class="movie-grid-cell">
-        <img class="grid-image" src="https://picsum.photos/550/750"/>
+        <img class="grid-image">
         <div class="movie-grid-cell-details">
             <h4></h4>
             <div class="grid-movie-details">
@@ -24,6 +24,13 @@ function createMovieCell(movieData, section) {
     let genreSection = document.getElementById(section)
     let movieGrid = genreSection.querySelector(".movie-grid")
     let cellTemplate = movieCellTemplate.content.cloneNode(true)
+
+    let movieImage = cellTemplate.querySelector("img")
+    movieImage.setAttribute("src", movieData.image_url)
+    movieImage.setAttribute("onerror", "this.src='../image/no-image.png'")
+    movieImage.setAttribute("alt", "Affiche du film " + movieData.title)
+    movieImage.setAttribute("title", movieData.title)
+
     cellTemplate.querySelector("h4").innerText = movieData.title
     cellTemplate.querySelector("a").setAttribute("href", `#modal-movie-details-${movieData.id}`)
     cellTemplate.querySelector("#modal-movie-details").setAttribute("id", `modal-movie-details-${movieData.id}`)

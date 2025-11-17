@@ -56,7 +56,11 @@ function createModalContent(movie) {
 
     modalContent.querySelector(".summary-section").innerText = movie.long_description
 
-    modalContent.querySelector("img").setAttribute("src", "https://picsum.photos/550/750")
+    let modalImage = modalContent.querySelector("img")
+    modalImage.setAttribute("src", movie.image_url)
+    modalImage.setAttribute("onerror", "this.src='../image/no-image.png'")
+    modalImage.setAttribute("alt", "Affiche du film " + movie.title)
+    modalImage.setAttribute("title", movie.title)
 
     modalContent.querySelector(".actors-section").innerHTML = `<b>Avec:</b><br>
     ${movie.actors.join(", ")}`

@@ -1,5 +1,6 @@
 body {
     background-color: #FFFFFF;
+    padding: 1em;
 }
 
 header {
@@ -215,6 +216,7 @@ h3 {
 
 .movie-grid-cell {
     display: grid;
+    width: 100%;
 }
 
 .movie-grid .grid-image,
@@ -286,6 +288,10 @@ option {
 
 /*Responsive design from medium to large screen*/
 @media screen and (min-width: 768px) {
+    body {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
     .logo {
         margin-left: 20px;
     }
@@ -348,6 +354,10 @@ option {
 
 /*Responsive design for large screen*/
 @media screen and (min-width: 992px) {
+    body {
+        padding: 2em 6em;
+    }
+
     h1 {
         font-size: 4em;
     }
